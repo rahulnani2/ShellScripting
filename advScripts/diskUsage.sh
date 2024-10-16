@@ -6,12 +6,9 @@ threshold=90
 df -H | awk '{print $5 " " $1}' | while read -r output ;
 do 
  echo "$output"
- usePercent=$( echo $output | awk '{print $1}' | cut -d '%' -f1 )
- echo "$usePercent"
+ usePercent=$( echo $output | awk '{print $1}' | cut -d '%' -f 1 )
  partition=$( echo $output | awk '{print $2}')
  if [ $usePercent -ge $threshold ] ; then 
-    echo "Running of out of space  $partition ($usePercent%)" 
+    echo "Running out of space  $partition ($usePercent%)" 
  fi
 done
-
-echo  " No Disk Alerts! Usage is below threshod "
