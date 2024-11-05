@@ -40,3 +40,51 @@ for i in {1..100); do
 done     
 
 # Question 5 - Write a script to print number of "S" in mississippi
+ 
+ #Declare a variable mississippi 
+ x="mississippi"
+ # grep -o is to fetch the letter 
+ # We are providing standard input as $x to grep -o command 
+ # wc -l is to count the nu
+ grep -o 's' <<< "$x" | wc -l 
+
+# Question 6 - How will you debug the shell script 
+set -x
+
+# Question 7 - uWhat is crontab in lInux ?  Can you provide an example of usage ?
+
+# Question 8- How to open a file in read-only mode ?
+vim -r <file_name>
+chmod 400 <filename>
+
+# Question 9 - What is the difference between soft and hard link ?
+# Hard link - It creates a copy and independent from original file
+# Soft link - A shortcut file 
+
+# Question 10 - What is the difference between break and continue statements 
+# Break - Ends the execution of loop and comes out of the loop 
+# Continue - Skips the steps followed by "continue" in loop 
+
+# Question 11 - What are some disadvantages of shell scripting ?
+# Errors are frequent and costly and single error can alter the command
+# The execution speed is slow
+# Large complex tasks aren't well suited to it 
+# It has minimal data structure 
+# Everytime a shell command is executed a new command is launched 
+
+# Question 12 - What are the different types of loops 
+
+# Question 13 - Is bash dynamic or statically typed why 
+# dynamically typed 
+
+# Question 14 - Explain the network troubleshooting tools you have used 
+ traceroute 
+
+# Question 15 -  How will you sort list of names in a file 
+  sort command 
+
+# How will you manage logs of a system that generate huge log files everday ?
+logrotate  
+
+
+
